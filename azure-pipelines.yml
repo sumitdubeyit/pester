@@ -30,5 +30,11 @@ steps:
     testResultsFormat: 'NUnit'
     testResultsFiles: 'TEST-Pester-1.xml'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: 'TEST-Pester-1.xml'
+    searchFolder: './'
+
 
 
