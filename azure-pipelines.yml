@@ -39,7 +39,7 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'NUnit'
-    testResultsFiles: 'TEST-Pester.xml'
+    testResultsFiles: './TEST-Pester.xml'
     searchFolder: './$(System.DefaultWorkingDirectory)'
 
 
