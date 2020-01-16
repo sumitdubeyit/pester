@@ -22,7 +22,7 @@ steps:
     azureSubscription: 'Azure Pass - Sponsorship (3a82d220-6df1-4044-9abf-6f33a3ae371f)'
     ScriptType: 'FilePath'
     ScriptPath: 'azure.ps1'
-    ScriptArguments: '-path "./" -OutputFile "./TEST-Pester-1.xml" -OutputFormat NUnitXml'
+    ScriptArguments: '-path "./" -OutputFile "TEST-Pester-1.xml" -OutputFormat NUnitXml'
     azurePowerShellVersion: 'LatestVersion'
 
 - task: PublishTestResults@2
@@ -35,6 +35,12 @@ steps:
     testResultsFormat: 'NUnit'
     testResultsFiles: 'TEST-Pester-1.xml'
     searchFolder: './'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: 'TEST-Pester-1.xml'
+    searchFolder: './$(System.DefaultWorkingDirectory)'
 
 
 
