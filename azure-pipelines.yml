@@ -25,3 +25,10 @@ steps:
     ScriptArguments: '-path "./" -OutputFile "./TEST-Pester-1.xml" -OutputFormat NUnitXml'
     azurePowerShellVersion: 'LatestVersion'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: 'TEST-Pester-1.xml'
+
+
+
