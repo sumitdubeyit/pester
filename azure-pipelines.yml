@@ -40,7 +40,7 @@ steps:
   inputs:
     testResultsFormat: 'NUnit'
     testResultsFiles: 'TEST-Pester.xml'
-    searchFolder: './$(System.DefaultWorkingDirectory)'
+    searchFolder: '$(System.DefaultWorkingDirectory)/*'
 
 
 
